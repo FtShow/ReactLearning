@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import "./App.css";
+import Accordion from "./Components/Accordion/Accordion";
+import {UncontroledOnOff} from "./Components/uncontroledOnOff/UncontroledOnOff";
+import {OnOff} from "./Components/OnOff/OnOff";
+import {Rating, ratingValueType} from "./Components/Ratings/Rating";
+import {UncontroledAccordion} from "./Components/UncontroledAccordion/UncontroledAccordion";
+import {UncontroledRatings} from "./Components/UncontroledRatings/UncontroledRatings";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [ratingValue, setRatingValue] = useState<any>(0)
+    const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    const [onOfValue, setOnOfValue] = useState(true);
+    const onChangeHandler = () => {
+        setOnOfValue(!onOfValue)
+    }
+    const changeRating = (v:ratingValueType)=>{
+        setRatingValue(v)
+    }
+
+    return (
+        <div className="App">
+            <Rating value={ratingValue} setRating={changeRating}/>
+            <Accordion titleValue={'Menu'}
+                       collapsed={accordionCollapsed}
+                       setCollapsed={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
+
+
+            <UncontroledAccordion titleValue={'Need to Learn'}/>
+            <UncontroledRatings />
+            <UncontroledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
+            <OnOff state={onOfValue}/>
+        </div>
+
+    );
 }
 
 export default App;
