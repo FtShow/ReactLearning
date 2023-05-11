@@ -6,7 +6,7 @@ type AccordionPropsType = {
     setCollapsed: (e: boolean)=>void
 }
 
-function Accordion(props: AccordionPropsType) {
+export const Accordion=(props: AccordionPropsType)=> {
     let {titleValue, collapsed, ...otherProps} = props;
 
         return (
