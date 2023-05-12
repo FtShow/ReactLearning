@@ -6,7 +6,7 @@ type itemSelectList = {
     value: any
 
 }
-type SelectListPropsType = {
+export type SelectListPropsType = {
     list: itemSelectList[]
 }
 
