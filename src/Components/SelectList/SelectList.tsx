@@ -19,12 +19,26 @@ export const SelectList: React.FC<SelectListPropsType> = (props) => {
     }
 
     const displayList = props.list.map(listItem =>
-        <ListItemButton onClick={onClickHandler}><ListItemText sx={{textAlign: "center"}}
-                                                               primary={listItem.title}/></ListItemButton>)
+        <ListItemButton onClick={onClickHandler}>
+            <ListItemText sx={{
+                textAlign: "center",
+                "&:hover span": {
+                    backgroundColor: "red",
+                },
+            }}
+                          primary={listItem.title}/></ListItemButton>)
     return (
 
-        <Box sx={{width: 200, bgcolor: "#333333", color: "white", position: "absolute"}}>
-            <List sx={{textAlign: "center"}} onClick={() => setVisibleList(!visibleList)}>
+        <Box sx={{
+            width: 200,
+            bgcolor: "#333333",
+            ":hover": "bgcolor: red",
+            color: "white",
+            position: "absolute"
+        }}>
+            <List sx={{
+                textAlign: "center",
+            }} onClick={() => setVisibleList(!visibleList)}>
                 {visibleList ? title : displayList}
             </List>
         </Box>
