@@ -1,4 +1,5 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
+import {accordionAC, accordionReducer} from "./AccordionReducer";
 
 type AccordionPropsType = {
     titleValue: string;
@@ -7,14 +8,15 @@ type AccordionPropsType = {
 
 export function UncontroledAccordion(props: AccordionPropsType) {
     let {titleValue, ...otherProps} = props;
-    const [collapsed, setCollapsed] = useState<boolean>(false)
+    const [collapsed, dispatch] = useReducer(accordionReducer, {collapsed: false})
     const onclickHandler = () => {
-        setCollapsed(!collapsed)
+        console.log('12121212')
+        dispatch(accordionAC())
     }
     return (
         <div>
             <AccordionTitle onClick={onclickHandler} title={titleValue}/>
-            {collapsed && <AccordionBody/>}
+            {collapsed.collapsed && <AccordionBody/>}
         </div>
     )
 

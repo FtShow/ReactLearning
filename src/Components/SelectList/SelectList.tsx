@@ -29,7 +29,7 @@ export const SelectList: React.FC<SelectListPropsType> = (props) => {
                           primary={listItem.title}/></ListItemButton>)
     return (
 
-        <Box sx={{11
+        <Box sx={{
             width: 200,
             bgcolor: "#333333",
             ":hover": "bgcolor: red",
