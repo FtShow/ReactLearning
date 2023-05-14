@@ -16,6 +16,7 @@ function App() {
     const [onOfValue, setOnOfValue] = useState(true);
     const onChangeHandler = () => {
         setOnOfValue(!onOfValue)
+        console.log('ree')
     }
     const changeRating = (v:ratingValueType)=>{
         setRatingValue(v)
