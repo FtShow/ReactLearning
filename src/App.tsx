@@ -50,7 +50,7 @@ function App() {
             <UncontrolledAccordion titleValue={"Need to Learn"}/>
             <UncontrolledRatings/>
             <UncontrolledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
-            <OnOff state={onOfValue}/>
+            <OnOff state={onOfValue}/>3
         </div>
 
     );
