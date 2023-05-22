@@ -10,7 +10,7 @@ export type SelectListPropsType = {
     list: itemSelectList[]
 }
 
-export const SelectList: React.FC<SelectListPropsType> = (props) => {
+export const SelectListComponent: React.FC<SelectListPropsType> = (props) => {
     const [title, setTitle] = useState<string | null>("LIST FRIENDS")
     const [visibleList, setVisibleList] = useState(true)
     const onClickHandler = (e: MouseEvent<HTMLDivElement>) => {

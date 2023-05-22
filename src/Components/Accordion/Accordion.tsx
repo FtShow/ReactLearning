@@ -6,7 +6,7 @@ type AccordionPropsType = {
     setCollapsed: (e: boolean)=>void
 }
 
-export const Accordion=(props: AccordionPropsType)=> {
+export const AccordionComponent=(props: AccordionPropsType)=> {
     let {titleValue, collapsed, ...otherProps} = props;
 
         return (
@@ -43,5 +43,3 @@ function AccordionBody() {
         </ul>
     )
 }
-
-export default Accordion;

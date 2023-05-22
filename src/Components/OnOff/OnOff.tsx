@@ -27,7 +27,7 @@ type OnOffType = {
     state: boolean;
 }
 
-export const OnOff: React.FC<OnOffType> = (props) => {
+export const OnOffComponent: React.FC<OnOffType> = (props) => {
     const {state, ...otherProps} = props;
     const [enabled, setEnabled] = useState(state)
     const enablerFunc = (swichEnabled: boolean) => {

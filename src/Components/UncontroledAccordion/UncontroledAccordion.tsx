@@ -6,7 +6,7 @@ type AccordionPropsType = {
 
 }
 
-export function UncontroledAccordion(props: AccordionPropsType) {
+export function UncontroledAccordionComponents(props: AccordionPropsType) {
     let {titleValue, ...otherProps} = props;
     const [collapsed, dispatch] = useReducer(accordionReducer, {collapsed: false})
     const onclickHandler = () => {

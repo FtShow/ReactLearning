@@ -1,4 +1,4 @@
-type StateType = {
+export type StateType = {
     collapsed: boolean
 }
 
@@ -20,6 +20,5 @@ type accordionACType = ReturnType<typeof accordionAC>
 export const accordionAC = () => {
     return {
         type: "TOOGLE",
-        payload: {}
     } as const
 }

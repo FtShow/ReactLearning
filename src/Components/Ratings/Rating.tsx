@@ -7,7 +7,7 @@ export type RatingPropsType = {
     setRating: (value: ratingValueType) => void
 }
 
-export function Rating(props: RatingPropsType) {
+export function RatingComponent(props: RatingPropsType) {
 
     return (
         <div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 
-export function UncontroledRatings() {
+export function UncontroledRatingsComponent() {
     const [value, setValue] = useState(0)
     const onclickHandler = (value: number) => {
         setValue(value)

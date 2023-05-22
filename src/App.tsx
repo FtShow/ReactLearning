@@ -1,12 +1,12 @@
 import React, {useState} from "react";
 import "./App.css";
-import Accordion from "./Components/Accordion/Accordion";
-import {UncontroledOnOff} from "./Components/uncontroledOnOff/UncontroledOnOff";
-import {OnOff} from "./Components/OnOff/OnOff";
-import {Rating, ratingValueType} from "./Components/Ratings/Rating";
-import {UncontroledAccordion} from "./Components/UncontroledAccordion/UncontroledAccordion";
-import {UncontroledRatings} from "./Components/UncontroledRatings/UncontroledRatings";
-import {SelectList} from "./Components/SelectList/SelectList";
+import {AccordionComponent} from "./Components/Accordion/Accordion";
+import {UncontroledOnOffComponent} from "./Components/uncontroledOnOff/UncontroledOnOff";
+import {OnOffComponent} from "./Components/OnOff/OnOff";
+import {RatingComponent, ratingValueType} from "./Components/Ratings/Rating";
+import {UncontroledAccordionComponents} from "./Components/UncontroledAccordion/UncontroledAccordion";
+import {UncontroledRatingsComponent} from "./Components/UncontroledRatings/UncontroledRatings";
+import {SelectListComponent} from "./Components/SelectList/SelectList";
 
 
 function App() {
@@ -22,11 +22,19 @@ function App() {
     }
     const testState = [
         {title: "Misha", value: crypto.randomUUID()},
-        {title: "Dima", value:  crypto.randomUUID()},
-        {title: "Nasty", value:  crypto.randomUUID()},
-        {title: "Lol", value:  crypto.randomUUID()},
-        {title: "KEK", value:  crypto.randomUUID()},
+        {title: "Dima", value: crypto.randomUUID()},
+        {title: "Nasty", value: crypto.randomUUID()},
+        {title: "Lol", value: crypto.randomUUID()},
+        {title: "KEK", value: crypto.randomUUID()},
     ]
+
+    const Rating = React.memo(RatingComponent)
+    const Accordion = React.memo(AccordionComponent)
+    const SelectList = React.memo(SelectListComponent)
+    const UncontrolledAccordion = React.memo(UncontroledAccordionComponents)
+    const UncontrolledRatings = React.memo(UncontroledRatingsComponent)
+    const UncontrolledOnOff = React.memo(UncontroledOnOffComponent)
+    const OnOff = React.memo(OnOffComponent)
 
     return (
         <div className="App">
@@ -37,10 +45,10 @@ function App() {
                            setAccordionCollapsed(!accordionCollapsed)
                        }}/>
 
-            <SelectList  list={testState}/>
-            <UncontroledAccordion titleValue={"Need to Learn"}/>
-            <UncontroledRatings/>
-            <UncontroledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
+            <SelectList list={testState}/>
+            <UncontrolledAccordion titleValue={"Need to Learn"}/>
+            <UncontrolledRatings/>
+            <UncontrolledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
             <OnOff state={onOfValue}/>
         </div>
 

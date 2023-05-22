@@ -28,7 +28,7 @@ type OnOffType = {
     setOnOfValue: ()=>void
 }
 
-export const UncontroledOnOff: React.FC<OnOffType> = (props) => {
+export const UncontroledOnOffComponent: React.FC<OnOffType> = (props) => {
     const {state, setOnOfValue} = props;
 
 
