@@ -7,6 +7,8 @@ import {RatingComponent, ratingValueType} from "./Components/Ratings/Rating";
 import {UncontroledAccordionComponents} from "./Components/UncontroledAccordion/UncontroledAccordion";
 import {UncontroledRatingsComponent} from "./Components/UncontroledRatings/UncontroledRatings";
 import {SelectListComponent} from "./Components/SelectList/SelectList";
+import {CustomSelect} from "./Components/CustomSelect/CustomSelect";
+import {LearnUsememo} from "./Components/LearUsememo/LearnUsememo";
 
 
 function App() {
@@ -37,8 +39,18 @@ function App() {
     const UncontrolledOnOff = React.memo(UncontroledOnOffComponent)
     const OnOff = React.memo(OnOffComponent)
 
+    const items = [
+        {value: "1", title: "Minsk"},
+        {value: "2", title: "Moscow"},
+        {value: "3", title: "Lissabon"}
+    ]
+    const [value, setValue] = useState('1')
+
     return (
         <div className="App">
+            <LearnUsememo/>
+            <CustomSelect items={items} value={value} onChange={setValue}/>
+            <hr/>
             <Rating value={ratingValue} setRating={changeRating}/>
             <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
@@ -50,7 +62,7 @@ function App() {
             <UncontrolledAccordion titleValue={"Need to Learn"}/>
             <UncontrolledRatings/>
             <UncontrolledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
-            <OnOff state={onOfValue}/>3
+            <OnOff state={onOfValue}/>
         </div>
 
     );
