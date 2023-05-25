@@ -1,5 +1,5 @@
-import React, {MouseEvent, MouseEventHandler, useState} from "react";
-import {Box, FormControl, InputLabel, List, ListItem, ListItemButton, ListItemText, NativeSelect} from "@mui/material";
+import React, {MouseEvent, useState} from "react";
+import {Box, List, ListItemButton, ListItemText} from "@mui/material";
 
 type itemSelectList = {
     title: string,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Header } from './Header';
 import './page.css';
-import {SelectList, SelectListPropsType} from "../Components/SelectList/SelectList";
+import {SelectListPropsType} from "../Components/SelectList/SelectList";
 import {Meta} from "@storybook/react";
 import {Button} from "./Button";
 //
@@ -26,8 +26,4 @@ type User = {
 };
 
 
-const test1 = () => {
-  return (
-   <SelectList list={testState}/>
-  )
-}
+
