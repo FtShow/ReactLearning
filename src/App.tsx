@@ -9,6 +9,7 @@ import {UncontroledRatingsComponent} from "./Components/UncontroledRatings/Uncon
 import {SelectListComponent} from "./Components/SelectList/SelectList";
 import {CustomSelect} from "./Components/CustomSelect/CustomSelect";
 import {LearnUsememo} from "./Components/LearUsememo/LearnUsememo";
+import {BookSecret} from "./Components/BookSecretusecallback/BookSecret";
 
 
 function App() {
@@ -48,9 +49,11 @@ function App() {
 
     return (
         <div className="App">
+            <BookSecret/>
             <LearnUsememo/>
-            <CustomSelect items={items} value={value} onChange={setValue}/>
             <hr/>
+            <CustomSelect items={items} value={value} onChange={setValue}/>
+
             <Rating value={ratingValue} setRating={changeRating}/>
             <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
@@ -62,7 +65,7 @@ function App() {
             <UncontrolledAccordion titleValue={"Need to Learn"}/>
             <UncontrolledRatings/>
             <UncontrolledOnOff state={onOfValue} setOnOfValue={onChangeHandler}/>
-            <OnOff state={onOfValue}/>
+            <OnOff state={true}/>
         </div>
 
     );

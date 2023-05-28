@@ -1,6 +1,7 @@
 import React, {useEffect, useMemo, useState} from "react";
 
 export const LearnUsememo = () => {
+    console.log('1212')
     const [a, setA] = useState(1)
     const [b, setB] = useState(1)
     let resultA = 1
