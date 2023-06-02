@@ -1,0 +1,40 @@
+.clockBody{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.hours{
+    height: 100px;
+    margin-top: -100px;
+    width: 8px;
+    background-color: #c7c6c6;
+    transform-origin: bottom;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.minutes{
+    position: absolute;
+    height: 120px;
+    margin-top: -120px;
+    width: 5px;
+    background-color: #c7c6c6;
+    transform-origin: bottom;
+    border-radius: 6px;
+}
+.seconds{
+    position: absolute;
+    height: 140px;
+    margin-top: -140px;
+    width: 2px;
+    background-color: #d7d6d6;
+    transform-origin: bottom;
+    border-radius: 6px;
+}

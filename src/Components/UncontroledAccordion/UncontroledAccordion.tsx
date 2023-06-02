@@ -10,7 +10,7 @@ export function UncontroledAccordionComponents(props: AccordionPropsType) {
     let {titleValue, ...otherProps} = props;
     const [collapsed, dispatch] = useReducer(accordionReducer, {collapsed: false})
     const onclickHandler = () => {
-        console.log('12121212')
+
         dispatch(accordionAC())
     }
     return (
