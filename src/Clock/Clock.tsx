@@ -11,14 +11,13 @@ export const Clock = () => {
         setInterval(()=>{
          setTime(new Date())
         }, 1000)
-    }, [])
-    console.log('render')
+    })
+
     return (
-        <div className={`${cs.clockBody}`}>
+        <div className={cs.clockBody}>
             <div className={cs.hours} style={{transform: `rotate(${hoursDeg}deg)`}}></div>
             <div className={cs.minutes} style={{transform: `rotate(${minutesDeg}deg)`}}></div>
             <div className={cs.seconds} style={{transform: `rotate(${secondsDeg}deg)`}}></div>
-
         </div>
     );
 };

@@ -11,6 +11,7 @@ import {CustomSelect} from "./Components/CustomSelect/CustomSelect";
 import {LearnUsememo} from "./Components/LearUsememo/LearnUsememo";
 import {BookSecret} from "./Components/BookSecretusecallback/BookSecret";
 import {Clock} from "./Clock/Clock";
+import axios from "axios";
 
 
 const Rating = React.memo(RatingComponent)
@@ -26,6 +27,10 @@ const BookSecret2 = React.memo(BookSecret)
 
 let a = [1,2,3,4,5]
 function App() {
+
+    axios.get('https://google.com')
+        .then(res=> res.data)
+        .then(data=>console.log(data))
 
     const [ratingValue, setRatingValue] = useState<any>(0)
     const [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
