@@ -11,7 +11,7 @@ export const Clock = () => {
         setInterval(()=>{
          setTime(new Date())
         }, 1000)
-    })
+    }, [])
 
     return (
         <div className={cs.clockBody}>
