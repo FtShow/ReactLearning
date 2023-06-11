@@ -6,10 +6,10 @@ export const Clock = () => {
 
     let secondsDeg = 6 * time.getSeconds()
     let minutesDeg = 6 * time.getMinutes()
-    let hoursDeg = 30 * (time.getHours()%12)
-    useEffect(()=>{
-        setInterval(()=>{
-         setTime(new Date())
+    let hoursDeg = 30 * (time.getHours() % 12)
+    useEffect(() => {
+        setInterval(() => {
+            setTime(new Date())
         }, 1000)
     }, [])
 
