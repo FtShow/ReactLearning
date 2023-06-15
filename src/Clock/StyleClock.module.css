@@ -1,4 +1,4 @@
-.clockBody{
+.clockBody {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -6,9 +6,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-.hours{
+.clockBody span {
+    top: 10%;
+    color: #5ba5d5;
+    font-size: 3em;
+    margin-top: 100px;
+    z-index: 10;
+
+}
+
+.hours {
     height: 100px;
     margin-top: -100px;
     width: 8px;
@@ -18,7 +28,7 @@
     position: absolute;
 }
 
-.minutes{
+.minutes {
     position: absolute;
     height: 120px;
     margin-top: -120px;
@@ -27,7 +37,8 @@
     transform-origin: bottom;
     border-radius: 6px;
 }
-.seconds{
+
+.seconds {
     position: absolute;
     height: 140px;
     margin-top: -140px;

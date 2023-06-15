@@ -27,6 +27,7 @@ const BookSecret2 = React.memo(BookSecret)
 
 let a = [1,2,3,4,5]
 function App() {
+    const [ar, setar] = useState(true)
 
     axios.get('https://google.com')
         .then(res=> res.data)
@@ -64,7 +65,8 @@ function App() {
 
     return (
         <div className="App">
-            <Clock/>
+            <button onClick={()=>{setar(!ar)}}>AADADADA</button>
+            {ar && <Clock/>}
             <BookSecret2 books={books}/>
             <LearnUsememo/>
             <hr/>
